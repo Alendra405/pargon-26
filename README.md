@@ -1,15 +1,15 @@
-# PARGON 26 – Post-Quantum Cryptography with Physical Aperture Detection 🚀
+# PARGON 26 – Post-Quantum Cryptography with Physical Aperture Detection 🚀 :-D
 
 A hybrid quantum-inspired encryption system that detects eavesdroppers through physical mask mismatch.
 
-## Overview 🕶
+## Overview 🕶 (¬_¬ )
 
 PARGON 26 combines BB84 for secure shared key generation with a deterministic random aperture mask (hole pattern) derived from the key as seed.
 
 Messages are transmitted via simulated photons from sender's mask positions.  
 If the receiver's mask differs (eavesdropper), most photons hit the wall instead of passing through holes → message corrupts → automatic detection.
 
-## Key Features 🔑
+## Key Features 🔑 (•_•)
 
 - Full BB84 implementation with QBER-based eavesdropper detection
 - Identical random mask generation on both sides using shared key as seed
@@ -17,7 +17,7 @@ If the receiver's mask differs (eavesdropper), most photons hit the wall instead
 - Tolerance for simulating real-world noise/misalignment
 - Automatic intrusion detection via photon blockage
 
-## Demo Output Example 🚦
+## Demo Output Example 🚦 ¯\_(ツ)_/¯
 ```bash
 private key created!
 Alice key :  [0 1 1 0 0 0 0 1 1 1]
@@ -49,4 +49,4 @@ pip install numpy
 python/python3 main.py
 ```
 
-Built by a 15-year-old self-taught developer in 2026.
+Built by a 15-year-old self-taught developer in 2026. ;-)

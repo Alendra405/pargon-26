@@ -17,7 +17,7 @@ If the receiver's mask differs (eavesdropper), most photons hit the wall instead
 - Tolerance for simulating real-world noise/misalignment
 - Automatic intrusion detection via photon blockage
 
-## Demo Output Example 🚦 ¯\_(ツ)_/¯
+## Demo Output Example 🚦 ¯\\_(ツ)_/¯
 ```bash
 private key created!
 Alice key :  [0 1 1 0 0 0 0 1 1 1]

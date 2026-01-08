@@ -1,79 +1,104 @@
-# PARGON 26 – Post-Quantum Cryptography with Physical Aperture Detection 🚀 (⌐■_■)
+# PARGON-26 – Post-Quantum Cryptography with Physical Aperture Detection 🚀
 
-A hybrid quantum-inspired encryption system that detects eavesdroppers through physical mask mismatch.
+A hybrid quantum-inspired encryption system that detects eavesdroppers through physical mask (aperture) mismatch.
 
-## Overview 🕶 (¬_¬ )
+## Overview 🕶 (•_•)
 
-PARGON 26 combines BB84 for secure shared key generation with a deterministic random aperture mask (hole pattern) derived from the key as seed.
+PARGON-26 combines the BB84 quantum key distribution protocol with a deterministic random aperture mask (random hole pattern) generated from the shared key as seed.
 
-Messages are transmitted via simulated photons from sender's mask positions.  
-If the receiver's mask differs (eavesdropper), most photons hit the wall instead of passing through holes → message corrupts → automatic detection.
+Binary messages are transmitted via simulated photons sent from the sender's mask positions.  
+If the receiver's mask differs (eavesdropper), most photons hit the mask body instead of passing through holes, corrupting the message and automatically detecting intrusion.
 
-## Key Features 🔑 (•_•)
+Developed in January 2026 by a 15-year-old self-taught developer in Iran (Tehran & Chabahar Freezone).
+
+## Key Features 🔑
 
 - Full BB84 implementation with QBER-based eavesdropper detection
-- Identical random mask generation on both sides using shared key as seed
+- Deterministic generation of identical random aperture masks on both sides (no physical transmission needed)
 - Photon transmission for both 0 and 1 bits (full message length preserved)
-- Tolerance for simulating real-world noise/misalignment
-- Automatic intrusion detection via photon blockage
+- Large grid (1000×1000) + 1024 holes for high density
+- Increased tolerance (5.0) for improved noise resistance compared to previous version
+- Automatic intrusion detection: mismatched mask → blocked photons → corrupted message
 
-## Demo Output Example 🚦 ¯\\_(ツ)_/¯
-```bash
+## What's New in Version 1.1.0 (January 8, 2026) 🎇
+
+- Significantly improved noise resistance: Larger grid size (1000), more holes (1024), and higher tolerance (5.0) make the system much more robust against small deviations and floating-point precision issues compared to the previous version.
+- Better real-world simulation readiness while maintaining perfect message recovery for the legitimate receiver.
+
+## Demo Output Example 🚦
+
+```
 private key created!
-Alice key :  [0 1 1 0 0 0 0 1 1 1]
-Bob key :  [0 1 1 0 0 0 0 1 1 1]
-Eave was found! Error rate: 0.26
-Kate masks :  [(61.95, 36.56), (68.98, 44.46), (17.73, 15.39), (22.8, 43.34), (85.02, 35.57)]
-Shon masks :  [(61.95, 36.56), (68.98, 44.46), (17.73, 15.39), (22.8, 43.34), (85.02, 35.57)]
-Sended message : [1, 0, 1, 1, 0]
-Shon receive : [1, 0, 1, 1, 0]
+Alice key :  [1 1 0 0 0 0 0 0 0 1]
+Bob key :  [1 1 0 0 0 0 0 0 0 1]
+Eave was found! Error rate: 0.11
+
+__________                                     ________  ________
+\______   \_____ _______  ____   ____   ____   \_____  \/  _____/
+ |     ___/\__  \_  __ \/ ___\ /  _ \ /    \   /  ____/   __  \
+ |    |     / __ \|  | \/ /_/  >  <_> )   |  \ /       \  |__\  \
+ |____|    (____  /__|  \___  / \____/|___|  / \_______ \_____  /
+                \/     /_____/             \/          \/     \/
+      Version 1.1.0 (January 8, 2026)
+      Iran(Tehran(+3:30 UTC)), Baluchistan, Chabahar freezone
+      Developed by Arman Baadpa
+
+Kate masks :  [(319.35, 929.69), (646.2, 961.92), (281.05, 805.89), (84.31, 117.99), (238.88, 703.09), (128.1, 527.46), (376.45, 390.53), (819.04, 368.95), (111.41, 646.45), (324.91, 219.38)] , ...
+Shon masks :  [(319.35, 929.69), (646.2, 961.92), (281.05, 805.89), (84.31, 117.99), (238.88, 703.09), (128.1, 527.46), (376.45, 390.53), (819.04, 368.95), (111.41, 646.45), (324.91, 219.38)] , ...
+Sended message : [0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 
+1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+Shon receive : [0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1]
 Shon receive = message ✔
-David receive: [0, 0, 0, 0, 0]
+David receive: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 David was found!!!
 ```
 
-  <img width="1920" height="1080" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/0ea42f9a-bc0b-4d4c-86b8-861fee45616b" />
-
-
-## Technologies ☄
+## Technologies 💻
 
 - Python 3.8+
-- NumPy
-- random module (fixed seed)
+- NumPy – for array handling
+- random module – with fixed seed for reproducible masks
 
-## How to Run 🚀
+## How to Run 📐
 
 ```bash
 git clone https://github.com/Alendra405/pargon-26.git
-```
-```bash
+cd pargon-26
+
 pip install numpy
-```
-```bash
-python/python3 main.py
+
+python main.py
 ```
 
-Built by a 15-year-old self-taught developer in 2026. ;-)
+## Why It Matters ¯\\_(ツ)_/¯
+
+As quantum computers threaten classical cryptography, PARGON-26 explores a creative hybrid: information-theoretically secure BB84 + active physical-layer detection through aperture mismatch.
+
+The enhanced noise resistance in this version brings the simulation one step closer to real-world feasibility.
+
+Star ⭐ this repo if you find it interesting!  
+Feedback & contributions are welcome.
+
 ```bash
 MIT License
 
- Copyright (c) [2026] [ARMAN BAADPA]
+Copyright (c) 2026 Arman Baadpa
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
- The above copyright notice and this permission notice shall be included in all
- copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```

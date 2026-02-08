@@ -11,7 +11,6 @@ If the receiver's mask differs (eavesdropper), most photons hit the mask body in
 
 Developed in January 2026 by a 15-year-old self-taught developer in Iran (Tehran & Chabahar Freezone).
 
-![Uploading Artboard – 1.png…]()
 
 
 ## Key Features 🔑
